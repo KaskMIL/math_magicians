@@ -15,19 +15,19 @@ class Buttons extends PureComponent {
       let li;
       if (text === '0') {
         li = (
-          <li key={id} className="calcBtn zero">
+          <li id={id} className="calcBtn zero">
             {text}
           </li>
         );
-      } else if (text === '/' || text === 'x' || text === '-' || text === '+' || text === '=') {
+      } else if (text === '/' || text === 'x' || text === '-' || text === '+') {
         li = (
-          <li key={id} className="calcBtn orange">
+          <li id={id} className="calcBtn orange">
             {text}
           </li>
         );
       } else {
         li = (
-          <li key={id} className="calcBtn white">
+          <li id={id} className="calcBtn white">
             {text}
           </li>
         );
