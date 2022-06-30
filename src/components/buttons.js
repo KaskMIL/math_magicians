@@ -7,6 +7,12 @@ class Buttons extends Component {
     this.buttons = this.props;
   }
 
+  handleClick(text) {
+    const { onClickBtns } = this.props;
+    onClickBtns(text);
+    console.log(onClickBtns(text));
+  }
+
   render() {
     const { buttons } = this.props;
     const list = [];
@@ -15,19 +21,19 @@ class Buttons extends Component {
       let li;
       if (text === '0') {
         li = (
-          <li key={id} className="calcBtn zero">
+          <li key={id} className="calcBtn zero" onClick={() => this.handleClick(text)}>
             {text}
           </li>
         );
       } else if (text === '÷' || text === 'x' || text === '-' || text === '+' || text === '=') {
         li = (
-          <li key={id} className="calcBtn orange">
+          <li key={id} className="calcBtn orange" onClick={() => this.handleClick(text)}>
             {text}
           </li>
         );
       } else {
         li = (
-          <li key={id} className="calcBtn white">
+          <li key={id} className="calcBtn white" onClick={() => this.handleClick(text)}>
             {text}
           </li>
         );
@@ -38,7 +44,10 @@ class Buttons extends Component {
   }
 }
 
-Buttons.propTypes = { buttons: PropTypes.arrayOf(PropTypes.string) };
+Buttons.propTypes = {
+  buttons: PropTypes.arrayOf(PropTypes.string),
+  onClickBtns: PropTypes.func.isRequired,
+};
 Buttons.defaultProps = {
   buttons: [
     'AC',
