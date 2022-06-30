@@ -1,6 +1,8 @@
 import { PureComponent } from 'react';
 import Display from './display';
 import Buttons from './buttons';
+// import operate from './operate';
+// import calculate from './calculate';
 
 class Calculator extends PureComponent {
   render() {

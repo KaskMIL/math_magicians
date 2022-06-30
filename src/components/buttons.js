@@ -1,7 +1,7 @@
-import { PureComponent } from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-class Buttons extends PureComponent {
+class Buttons extends Component {
   constructor(props) {
     super(props);
     this.buttons = this.props;
@@ -19,7 +19,7 @@ class Buttons extends PureComponent {
             {text}
           </li>
         );
-      } else if (text === '/' || text === 'x' || text === '-' || text === '+' || text === '=') {
+      } else if (text === '÷' || text === 'x' || text === '-' || text === '+' || text === '=') {
         li = (
           <li key={id} className="calcBtn orange">
             {text}
@@ -44,7 +44,7 @@ Buttons.defaultProps = {
     'AC',
     '+/-',
     '%',
-    '/',
+    '÷',
     '7',
     '8',
     '9',
