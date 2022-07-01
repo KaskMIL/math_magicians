@@ -8,9 +8,8 @@ class Buttons extends Component {
   }
 
   handleClick(text) {
-    const { onClickBtns } = this.props;
-    onClickBtns(text);
-    console.log(onClickBtns(text));
+    const { onClickBtn } = this.props;
+    onClickBtn(text);
   }
 
   render() {
@@ -21,21 +20,15 @@ class Buttons extends Component {
       let li;
       if (text === '0') {
         li = (
-          <li key={id} className="calcBtn zero" onClick={() => this.handleClick(text)}>
-            {text}
-          </li>
+          <li key={id} className="calcBtn zero" onClick={() => this.handleClick(text)}>{text}</li>
         );
       } else if (text === '÷' || text === 'x' || text === '-' || text === '+' || text === '=') {
         li = (
-          <li key={id} className="calcBtn orange" onClick={() => this.handleClick(text)}>
-            {text}
-          </li>
+          <li key={id} className="calcBtn orange" onClick={() => this.handleClick(text)}>{text}</li>
         );
       } else {
         li = (
-          <li key={id} className="calcBtn white" onClick={() => this.handleClick(text)}>
-            {text}
-          </li>
+          <li key={id} className="calcBtn white" onClick={() => this.handleClick(text)}>{text}</li>
         );
       }
       list.push(li);
@@ -46,7 +39,7 @@ class Buttons extends Component {
 
 Buttons.propTypes = {
   buttons: PropTypes.arrayOf(PropTypes.string),
-  onClickBtns: PropTypes.func.isRequired,
+  onClickBtn: PropTypes.func.isRequired,
 };
 Buttons.defaultProps = {
   buttons: [
