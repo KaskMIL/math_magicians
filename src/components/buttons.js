@@ -17,23 +17,23 @@ class Buttons extends Component {
     const list = [];
     buttons.forEach((text, index) => {
       const id = `button-${index}`;
-      let li;
+      let button;
       if (text === '0') {
-        li = (
-          <li key={id} className="calcBtn zero" onClick={() => this.handleClick(text)}>{text}</li>
+        button = (
+          <button type="button" key={id} className="calcBtn zero" onClick={() => this.handleClick(text)}>{text}</button>
         );
       } else if (text === '÷' || text === 'x' || text === '-' || text === '+' || text === '=') {
-        li = (
-          <li key={id} className="calcBtn orange" onClick={() => this.handleClick(text)}>{text}</li>
+        button = (
+          <button type="button" key={id} className="calcBtn orange" onClick={() => this.handleClick(text)}>{text}</button>
         );
       } else {
-        li = (
-          <li key={id} className="calcBtn white" onClick={() => this.handleClick(text)}>{text}</li>
+        button = (
+          <button type="button" key={id} className="calcBtn white" onClick={() => this.handleClick(text)}>{text}</button>
         );
       }
-      list.push(li);
+      list.push(button);
     });
-    return <ul>{list}</ul>;
+    return <div className="btnCont">{list}</div>;
   }
 }
 

@@ -16,7 +16,7 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-ul {
+.btnCont {
   list-style: none;
   margin: 0;
   padding: 0;

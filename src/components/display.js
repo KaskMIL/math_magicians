@@ -20,7 +20,7 @@ class Display extends Component {
     const { keyEvent } = this.props;
     if (e.key === '0' || e.key === '1' || e.key === '3' || e.key === '4' || e.key === '5' || e.key === '6' || e.key === '7' || e.key === '8' || e.key === '9') {
       keyEvent(e.key);
-    } else if (e.key === 'Escape' || e.key === 'Cancel') {
+    } else if (e.key === 'escape' || e.key === 'cancel') {
       keyEvent('AC');
     } else if (e.key === '/') {
       keyEvent('÷');
@@ -43,7 +43,7 @@ class Display extends Component {
     const newValue = Display.validateObj(display());
     return (
       <div className="display">
-        <input id="display" name="display" type="text" value={newValue} onKeyPress={(e) => this.keyPressHandle(e)} onChange={(e) => this.displayChangeHandle(e)} />
+        <input id="display" name="display" type="text" value={newValue} onKeyDown={(e) => this.keyPressHandle(e.target)} onChange={(e) => this.displayChangeHandle(e)} />
       </div>
     );
   }
