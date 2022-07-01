@@ -1,10 +1,15 @@
-import { PureComponent } from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-class Buttons extends PureComponent {
+class Buttons extends Component {
   constructor(props) {
     super(props);
     this.buttons = this.props;
+  }
+
+  handleClick(text) {
+    const { onClickBtn } = this.props;
+    onClickBtn(text);
   }
 
   render() {
@@ -12,39 +17,36 @@ class Buttons extends PureComponent {
     const list = [];
     buttons.forEach((text, index) => {
       const id = `button-${index}`;
-      let li;
+      let button;
       if (text === '0') {
-        li = (
-          <li key={id} className="calcBtn zero">
-            {text}
-          </li>
+        button = (
+          <button type="button" key={id} className="calcBtn zero" onClick={() => this.handleClick(text)}>{text}</button>
         );
-      } else if (text === '/' || text === 'x' || text === '-' || text === '+' || text === '=') {
-        li = (
-          <li key={id} className="calcBtn orange">
-            {text}
-          </li>
+      } else if (text === '÷' || text === 'x' || text === '-' || text === '+' || text === '=') {
+        button = (
+          <button type="button" key={id} className="calcBtn orange" onClick={() => this.handleClick(text)}>{text}</button>
         );
       } else {
-        li = (
-          <li key={id} className="calcBtn white">
-            {text}
-          </li>
+        button = (
+          <button type="button" key={id} className="calcBtn white" onClick={() => this.handleClick(text)}>{text}</button>
         );
       }
-      list.push(li);
+      list.push(button);
     });
-    return <ul>{list}</ul>;
+    return <div className="btnCont">{list}</div>;
   }
 }
 
-Buttons.propTypes = { buttons: PropTypes.arrayOf(PropTypes.string) };
+Buttons.propTypes = {
+  buttons: PropTypes.arrayOf(PropTypes.string),
+  onClickBtn: PropTypes.func.isRequired,
+};
 Buttons.defaultProps = {
   buttons: [
     'AC',
     '+/-',
     '%',
-    '/',
+    '÷',
     '7',
     '8',
     '9',
