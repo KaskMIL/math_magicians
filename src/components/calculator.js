@@ -21,21 +21,22 @@ class Calculator extends PureComponent {
 
   /* Function to update state with input changes */
   handleChanges(input) {
-    this.setState({
-      obj: calculate(this.state.obj, input),
-    });
+    this.setState((state) => ({
+      obj: calculate(state.obj, input),
+    }));
     const { obj } = this.state;
     return obj;
   }
 
   getInfo() {
-    return this.state.obj;
+    const { obj } = this.state;
+    return obj;
   }
 
   render() {
     return (
       <div id="calculator">
-        <Display display={this.getInfo} onKeyEvent={this.handleChanges} />
+        <Display display={this.getInfo} keyEvent={this.handleChanges} />
         <Buttons onClickBtn={this.handleChanges} />
       </div>
     );

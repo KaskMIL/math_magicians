@@ -43,7 +43,7 @@ class Display extends Component {
     const newValue = Display.validateObj(display());
     return (
       <div className="display">
-        <input id="display" name="display" type="text" value={newValue} keyEvent={(e) => this.keyPressHandle(e)} onChange={(e) => this.displayChangeHandle(e)} />
+        <input id="display" name="display" type="text" value={newValue} onKeyPress={(e) => this.keyPressHandle(e)} onChange={(e) => this.displayChangeHandle(e)} />
       </div>
     );
   }
