@@ -11,9 +11,14 @@ html {
   box-sizing: inherit;
 }
 
+:root {
+  --orange: #f96e46;
+}
+
 body {
   font-size: 1.6rem;
   font-family: 'Poppins', sans-serif;
+  background-color: #f96e46;
 }
 
 .btnCont {
@@ -42,6 +47,12 @@ body {
   padding: 1rem;
   border: 0.1rem solid black;
   font-size: 1.8rem;
+  width: 100%;
+}
+
+.display input {
+  width: 100%;
+  padding: 0.5rem;
 }
 
 .calcBtn {
@@ -51,5 +62,6 @@ body {
 }
 
 .app {
-  max-width: 400px;
+  width: 100%;
+  padding: 0 2rem;
 }
