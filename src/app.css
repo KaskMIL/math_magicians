@@ -12,13 +12,13 @@ html {
 }
 
 :root {
-  --orange: #F96E46;
+  --orange: #f96e46;
 }
 
 body {
   font-size: 1.6rem;
   font-family: 'Poppins', sans-serif;
-  background-color: #F96E46;
+  background-color: #f96e46;
 }
 
 .btnCont {
