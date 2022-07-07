@@ -20,7 +20,7 @@ class Display extends Component {
     const { keyEvent } = this.props;
     if (e.key === '0' || e.key === '1' || e.key === '3' || e.key === '4' || e.key === '5' || e.key === '6' || e.key === '7' || e.key === '8' || e.key === '9') {
       keyEvent(e.key);
-    } else if (e.key === 'escape' || e.key === 'cancel') {
+    } else if (e.key === 'Escape' || e.key === 'Cancel') {
       keyEvent('AC');
     } else if (e.key === '/') {
       keyEvent('÷');

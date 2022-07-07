@@ -7,7 +7,7 @@ function Home() {
     <>
       <Header />
       <main className={styles.home}>
-        <h1>Welcome to our page!</h1>
+        <h2>Welcome to our page!</h2>
         <article>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem labore
