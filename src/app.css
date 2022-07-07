@@ -42,6 +42,12 @@ body {
   padding: 1rem;
   border: 0.1rem solid black;
   font-size: 1.8rem;
+  width: 100%;
+}
+
+.display input {
+  width: 100%;
+  padding: 0.5rem;
 }
 
 .calcBtn {
@@ -52,4 +58,5 @@ body {
 
 .app {
   width: 100%;
+  padding: 0 2rem;
 }

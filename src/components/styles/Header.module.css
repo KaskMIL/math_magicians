@@ -1,8 +1,16 @@
 .header {
   display: flex;
-  justify-content: space-around;
-  align-items: baseline;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
+  padding: 1rem 2rem;
+  border: 1px solid rgb(212, 212, 212);
+  border-radius: 2rem;
+}
+
+.header h1 {
+  margin: 0;
+  padding: 0;
 }
 
 .header nav ul {

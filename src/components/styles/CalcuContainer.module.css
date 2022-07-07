@@ -1,0 +1,19 @@
+.calcu {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  height: 60vh;
+  padding: 3rem 5rem;
+}
+
+.calcu h2 {
+  padding: 0;
+  margin: 0;
+  width: 40%;
+  text-align: center;
+}
+
+.calcu > div {
+  width: 70%;
+  height: 100%;
+}
