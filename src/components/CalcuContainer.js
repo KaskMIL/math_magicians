@@ -8,7 +8,7 @@ function CalculatorContainer() {
     <>
       <Header />
       <main className={styles.calcu}>
-        <h2>Let&apos;s do some Maths!</h2>
+        <h2 data-testid="calcuHeading">Let&apos;s do some Maths!</h2>
         <Calculator />
       </main>
     </>
