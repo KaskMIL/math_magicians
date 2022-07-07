@@ -11,9 +11,14 @@ html {
   box-sizing: inherit;
 }
 
+:root {
+  --orange: #F96E46;
+}
+
 body {
   font-size: 1.6rem;
   font-family: 'Poppins', sans-serif;
+  background-color: #F96E46;
 }
 
 .btnCont {
