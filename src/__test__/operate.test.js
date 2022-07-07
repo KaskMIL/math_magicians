@@ -21,3 +21,30 @@ describe('Operate with -', () => {
     expect(substract).toEqual('3.3')
   })
 })
+
+describe('Operate with x', () => {
+  test('use multiply with two integer numbers', () => {
+    const mult = operate(4, 5, 'x');
+    expect(mult).toEqual('20')
+  })
+  test('use multiply with two integer numbers', () => {
+    const mult = operate(7, 0, 'x');
+    expect(mult).toEqual('0')
+  })
+})
+
+describe('Operate with ÷', () => {
+  test('use divide with two integer numbers', () => {
+    const div = operate(80, 8, '÷');
+    expect(div).toEqual('10')
+  })
+  test('use divide with two integer numbers', () => {
+    const div = operate(40, 8, '÷');
+    expect(div).toEqual('5')
+  })
+  test('use divide with 0', () => {
+    const div = operate(40, 0, '÷');
+    expect(div).toEqual("Can't divide by 0.")
+  })
+  
+})
