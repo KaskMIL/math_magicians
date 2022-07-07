@@ -46,3 +46,16 @@ describe('If button = . should be include on next', () => {
     expect(result).toEqual({total: null, next: '0.', operation: null})
   })
 })
+
+describe('Test button =', ()=>{
+  test('If there are a value of next and operation',()=>{
+    const init = {total: '3' , next: '2' , operation: '+'};
+    const result = calculate(init,'=');
+    expect(result).toEqual({total: '5' , next: null , operation: null})
+  })
+  test('If there are a value of next and operation',()=>{
+    const init = {total: '3' , next: '2' , operation: null};
+    const result = calculate(init,'=');
+    expect(result).toEqual({})
+  })
+})
