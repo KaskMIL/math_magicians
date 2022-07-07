@@ -6,10 +6,10 @@ import Home from '../components/Home';
 test('Render correctly', () => {
   const tree = renderer
     .create(
-    <BrowserRouter>
-      <Home />
-    </BrowserRouter>
-      )
+      <BrowserRouter>
+        <Home />
+      </BrowserRouter>,
+    )
     .toJSON();
   expect(tree).toMatchSnapshot();
 });
