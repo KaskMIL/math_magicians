@@ -46,5 +46,19 @@ describe('Operate with ÷', () => {
     const div = operate(40, 0, '÷');
     expect(div).toEqual("Can't divide by 0.")
   })
-  
+})
+
+describe('Operate with %', () => {
+  test('use module with two integer numbers', () => {
+    const div = operate(80, 8, '%');
+    expect(div).toEqual('0')
+  })
+  test('use module with 0', () => {
+    const div = operate(40, 0, '÷');
+    expect(div).toEqual("Can't divide by 0.")
+  })
+})
+
+test('Should throw an error if a passed wrong operator', () => {
+  expect(() => operate(3,5,'{')).toThrow(Error)
 })
