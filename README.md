@@ -13,7 +13,8 @@
 
 ## Live Demo
 
-[Netlify](https://cool-entremet-c2e497.netlify.app/)
+- [Netlify](https://cool-entremet-c2e497.netlify.app/)
+- [Heroku](https://git.heroku.com/kaskmathmagicians.git)
 
 
 ## Getting Started
